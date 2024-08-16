@@ -6,7 +6,6 @@
 • Matplotlib.pyplot for displaying graphs
 • seaborn for plotting the data
 • random for making a choice from a list of items
-You can also use the ‘as’ keyword to shorten the modul
 """
 #libraries, 
 import pandas as pd
@@ -28,17 +27,12 @@ data = {'Date': pd.date_range('2021-01-01', periods=500),
 df = pd.DataFrame(data)
 
 """
-Descriptive statistics functions:
-DataFrame.count ;max; min;mean; std; select_dtypes
+Descriptive statistics:
 """
-#print(df.head(n=6))
-#print(df.describe(percentiles = [.25, .4, .6]))
-#print(df.info())
-
-"""
-this work here but not on jupyter
-"""
-#print(df.value_counts(ascending = True))
+print(df.head(n=6))
+print(df.describe(percentiles = [.25, .4, .6]))
+print(df.info())
+print(df.value_counts(ascending = True))
 
 """
 #4. CLEAN THE DATA
@@ -49,7 +43,6 @@ Convert the likes to integer
 new_df = df.dropna()
 df["Category"].fillna("Food", inplace = True)
 pd.to_datetime(new_df['Date'])
-#copy = false, makes changes to the original database
 new_df["Likes"].astype(int, copy = False, errors = 'raise')
 
 
@@ -57,23 +50,17 @@ new_df["Likes"].astype(int, copy = False, errors = 'raise')
 5. VISUALIZE THE DATA
 view it to observe relationships, perform statistics
 1. Create the histograms for Likes
-2.Create a boxplot to observe the relationship between Category and Likes
+2. Create a boxplot to observe the relationship between Category and Likes
 """
-#seaborn for creating the graph
-#histplot = sns.histplot(new_df['Likes'])
-#mathplot for showing it
-
-
-#sns.boxplot(new_df, x= 'Category', y='Likes')
+sns.histplot(new_df['Likes'])
+plt.show()
+sns.boxplot(new_df, x= 'Category', y='Likes')
 plt.show()
 
-#Here you group by Category and you return the mean of the likes
+#group by Category and you return the mean of the likes
 print((new_df.groupby('Category')['Likes'].mean()))
-
+#return the overall mean of the likes
 print((new_df['Likes'].mean()))
 
 
-"""
-Task 6 - Describe Conclusions
-"""
 
