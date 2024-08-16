@@ -15,4 +15,14 @@ Project Objectives:
 - Achieve their social media goals and provide data-driven recommendations
 
 
-After I performed my analysis, I will share my findings.
+After I performed my analysis, I came to the following conlusions:
+
+# Conclusions
+Since this data is randomly generated using random libraries, the results are also more or less the same for all variables observed regarding the mean, standard deviation and other statistical measures.
+
+Using a histogram graphical representation allows us to observe how many posts have the same number of likes. Even though this information can be quickly retrieved by using the mean() method over all Likes, it might be interesting for the company to observe the number of posts with the respective number of likes, to identify possible outliers. This could be a powerful tool to set realizable goals with regards to client reach and engangement.
+
+Further segmentation is required in order to get more specific results and using different categories in order to measure customer engangement in different areas can be an efficient measure, and a very effiecient approach to realize this is using the boxplot to get data about different quantiles.
+
+Jupyter link:
+https://hub.labs.coursera.org/connect/sharedzmlobpfg?forceRefresh=false&path=%2Fnotebooks%2FSocialMediaDataAnalysis.ipynb&isLabVersioning=file-prep
